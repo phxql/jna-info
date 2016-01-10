@@ -1,0 +1,22 @@
+group 'de.mkammerer'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+
+mainClassName = 'de.mkammerer.jnainfo.Program'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'net.java.dev.jna:jna:4.2.1'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.10'
+}
