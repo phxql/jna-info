@@ -4,8 +4,8 @@ version '1.0'
 apply plugin: 'java'
 apply plugin: 'application'
 
-sourceCompatibility = 1.5
-targetCompatibility = 1.5
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 mainClassName = 'de.mkammerer.jnainfo.Program'
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compile 'net.java.dev.jna:jna:4.2.1'
+    compile group: 'net.java.dev.jna', name: 'jna', version: '4.5.1'
 }
 
 task wrapper(type: Wrapper) {
