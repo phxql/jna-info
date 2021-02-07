@@ -7,7 +7,7 @@ import com.sun.jna.PlatformExt;
 
 public class Program {
     public interface CLibrary extends Library {
-        CLibrary INSTANCE = (CLibrary) Native.loadLibrary(Platform.isWindows() ? "msvcrt" : "c", CLibrary.class);
+        CLibrary INSTANCE = Native.load(Platform.isWindows() ? "msvcrt" : "c", CLibrary.class);
 
         void printf(String format, Object... args);
     }
