@@ -4,15 +4,19 @@ version '1.0'
 apply plugin: 'java'
 apply plugin: 'application'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
 
-mainClassName = 'de.mkammerer.jnainfo.Program'
+application {
+    mainClass = 'de.mkammerer.jnainfo.Program'
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile group: 'net.java.dev.jna', name: 'jna', version: '5.7.0'
+    implementation group: 'net.java.dev.jna', name: 'jna', version: '5.7.0'
 }
