@@ -13,6 +13,8 @@ public class Program {
     }
 
     public static void main(String[] args) {
+        System.out.println("JNA version: " + Native.VERSION);
+
         String nativeLibraryResourcePrefix = PlatformExt.getNativeLibraryResourcePrefix();
         System.out.println("nativeLibraryResourcePrefix: " + nativeLibraryResourcePrefix);
 
